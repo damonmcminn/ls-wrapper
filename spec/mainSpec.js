@@ -25,19 +25,19 @@ describe('ls-wrapper', function() {
     it('should set localStorage key/val as JSON string', function() {
 
       ls.set('foo', ['foo', 1, true]);
-      expect(localStorage.getItem('foo')).toBe('{"val":["foo",1,true]}');
+      expect(JSON.parse(localStorage.getItem('foo')).type).toBe('array');
 
       prefixed.set('bar', 'bar');
-      expect(localStorage.getItem('prefix.bar')).toBe('{"val":"bar"}');
+      expect(localStorage.getItem('prefix.bar')).toBe('{"val":"bar","type":"string"}');
 
     });
 
     it('#get should return parsed value', function() {
 
       ls.set('bar', 'bar');
-      prefixed.set('bar', true);
+      prefixed.set('bar', new Date(0));
       expect(ls.get('bar')).toBe('bar');
-      expect(prefixed.get('bar')).toBe(true);
+      expect(prefixed.get('bar').getTime()).toBe(0);
 
     });
 
