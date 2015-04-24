@@ -1,0 +1,34 @@
+{
+  "name": "ls-wrapper",
+  "version": "0.1.0",
+  "description": "Local storage wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/damonmcminn/ls-wrapper.git"
+  },
+  "keywords": [
+    "localstorage"
+  ],
+  "author": "Damon McMinn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/damonmcminn/ls-wrapper/issues"
+  },
+  "homepage": "https://github.com/damonmcminn/ls-wrapper",
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-browserify": "^4.1.2",
+    "karma-chrome-launcher": "^0.1.8",
+    "karma-jasmine": "^0.3.5",
+    "karma-requirejs": "^0.2.2"
+  },
+  "dependencies": {
+    "source-map-support": "^0.2.10"
+  }
+}
