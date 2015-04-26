@@ -1,6 +1,3 @@
-import {install} from 'source-map-support';
-install();
-
 import {getType} from 'js-type-check';
 
 export default function Wrapper(prefix) {
