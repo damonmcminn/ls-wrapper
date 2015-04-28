@@ -14,6 +14,10 @@ export default function Wrapper(prefix) {
       let key = prefix ? `${prefix}.${name}` : name;
       let val = JSON.stringify({val: data, type: getType(data)});
       return localStorage.setItem(key, val);
+    },
+
+    drop: (name) => {
+      return localStorage.removeItem(prefix ? `${prefix}.${name}` : name);
     }
 
   }

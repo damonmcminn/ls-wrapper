@@ -41,6 +41,19 @@ describe('ls-wrapper', function() {
 
     });
 
+    it('#drop should remove item', function() {
+
+      ls.set('foo', 'foo');
+      prefixed.set('bar', 'bar');
+
+      ls.drop('foo');
+      prefixed.drop('bar');
+
+      expect(ls.get('foo')).not.toBeDefined();
+      expect(prefixed.get('bar')).not.toBeDefined();
+
+    });
+
   });
 
 });
